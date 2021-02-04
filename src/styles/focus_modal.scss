@@ -1,0 +1,22 @@
+.focus-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+
+  &__media {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  &__close-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
