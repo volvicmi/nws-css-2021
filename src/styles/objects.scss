@@ -1,0 +1,242 @@
+/* Several times object/template (Button/)  */
+
+
+// SearchBar button 
+
+.searchbar__btn {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  top: 22px;
+  left: 845px;
+  z-index: 3;
+  display: inline-block;
+  border: 3px solid var(--hoverColor);
+  border-radius: 50%;
+  position: absolute;
+  background-color: transparent;
+  }
+  
+  .searchbar__btn:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 3px;
+    height: 13px;
+    border-radius:30%;
+    background-color: var(--hoverColor);
+    transform: rotate(-35deg);
+    top: 13px;
+    left: 13px;
+    
+  }
+
+@media screen and (max-width: 680px){
+  
+
+    .searchbar__btn {
+      width: 15px;
+      height: 15px;
+      margin-left:10px;
+      display: inline-block;
+      border: 2px solid var(--hoverColor);
+  
+    }
+    
+    .searchbar__btn:after {
+      border-radius:40%;
+      width: 2px;
+      height: 9px;
+      top: 9px;
+      left: 13px;
+    }
+  
+  }
+  
+  @media screen and (min-width: 681px) and (max-width: 1279px){
+  }
+
+
+
+  // Menu 
+
+  
+  #menuNav
+{
+  position: fixed;
+  width: 100vw;
+  margin-top: 0px;
+  height: 72px;
+  overflow: hidden;
+  background-color: #303134;
+  z-index: 1;
+}
+
+#menuNav a
+{
+  text-decoration: none;
+  color: #202124;
+  transition: color 0.3s ease;
+}
+
+#menuNav a:hover
+{
+  color: var(--hoverColor);
+}
+
+
+#menuNav input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+
+#menu {
+
+}
+
+ul {
+  margin-left: 100px;
+  margin-right:50px;
+  text-align: right;
+}
+
+#menu li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 9px;
+  color: white;
+  font-size: 20px;
+}
+
+
+  // Menu Mobile 
+
+@media screen and (max-width: 680px){
+
+  #menuNav
+{
+  width: auto;
+  height: auto;
+  display:inline-block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+#menuNav a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuNav a:hover
+{
+  color: var(--hoverColor);
+}
+
+
+#menuNav input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuNav span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background-color: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 2;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuNav span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuNav span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuNav input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background-color: #232323;
+}
+
+#menuNav input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuNav input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+    opacity: 95%;
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    margin: -100px 0 0 -90vw;
+    padding: 50px;
+    padding-top: 125px;
+    background-color: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  right: 10px;
+  font-size: 22px;
+}
+
+
+#menuNav input:checked ~ ul
+{
+  transform: none;
+}
+
+}
+
+

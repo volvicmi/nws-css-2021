@@ -1,9 +1,189 @@
 @import './focus_modal.scss';
+@import 'objects.scss';
+@import 'mixins.scss';
+
+
+html {
+  font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
 
 body {
   margin: 0;
+  background: #202124;
+  color: #f1f1f1;
 }
 
 .item-link {
+  cursor:pointer;
+}
+
+
+// Title and Logo
+
+.app__title {
+  margin-top: 19px;
+  position: fixed;
+  font-size: 0.9em;
+  z-index: 2;
+  left: 110px;
+  text-transform: uppercase;
+  max-width: 100px;
+  overflow: hidden
+}
+
+@media screen and (max-width: 680px){
+  
+  .app__title {
+    margin-top:4px;
+    position: fixed;
+    font-size: 0.9em;
+    z-index: 2;
+    left: 110px;
+    text-transform: uppercase;
+    max-width: 100px;
+    overflow: hidden
+  }
+  .logoNasa img {
+    position: fixed;
+    width: 80px;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+}
+
+@media screen and (min-width: 1279px){
+   .logoNasa img {
+      position: fixed;
+      width: 80px;
+      margin-left: 30px;
+      margin-top: 3px;
+  }
+}
+
+
+// SearchBar
+
+.searchbar {
+  
+  text-align: center;
+  position: fixed;
+  z-index: 3;
+}
+
+@media screen and (min-width: 1279px){
+
+  .searchbar__input {
+    position: absolute;
+    width: 690px;
+    left: 200px;
+    height: 36px;
+    margin-top:16px;
+    border-radius: 16px;
+    border: 1px solid #5f6368;
+    box-shadow: none;
+    background-color: #303134;
+    color: white;
+    text-align: left;
+    text-indent:1.3em;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 680px){
+  
+  .searchbar {
+    text-align: center;
+    position: relative;
+  }
+
+  .searchbar__input {
+    position: absolute;
+    width: 200px;
+    left: 50px;
+    height: 16px;
+    margin: 0;
+    border-radius: 16px;
+    border: 1px solid #5f6368;
+    box-shadow: none;
+    background-color: #303134;
+    color: white;
+    text-align: left;
+    text-indent:0.7em;
+    font-size: 0.8em;
+  }
+
+}
+
+
+.items {
+  margin-top: 72px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.item {
+  overflow: hidden;
+  text-align: left;
+}
+// h2
+
+.item__title {
+  margin:0 5% 0 0;
+  font-size: 2vw;
+  max-width: 66.6vw;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  color: #a2b1e2;
+}
+
+
+p {
+max-width: 75%;
+font-size: 1vw;
+}
+
+.item__keywords {
+  max-width: 66.6vw;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// linkWords
+
+.item__keyword {
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  color: var(--hoverColor);
+}
+
+.item__keyword:hover {
   cursor: pointer;
+  text-decoration: underline;
+}
+
+// ImageContainer
+
+
+.item__preview {
+
+  max-width: 300px;
+  max-height: 300px;
+  background-size: cover;
+  position: absolute;
+  right: 5vw;
+  z-index: -1;
+}
+
+@media screen and (max-width: 680px){
+
+  .item__preview {
+    text-align: center;
+    max-width: 80px;
+    max-height: 80px;
+    background-size: cover;
+    position: absolute;
+    right: 5vw;
+  }
 }
