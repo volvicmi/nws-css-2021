@@ -31,13 +31,13 @@
     left: 13px;
   }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1279px){
   
 
     .searchbar__btn {
       width: 15px;
       height: 15px;
-      left: 68vw;
+      left: 66vw;
       margin-left:10px;
       display: inline-block;
       border: 2px solid var(--hoverColor);
@@ -57,7 +57,7 @@
 
   // Menu 
 
-  @media screen and (min-width: 1279px){
+  @media screen and (min-width: 1280px){
 
   #menuNav
 {
@@ -120,7 +120,7 @@ ul {
 
   // Menu Mobile 
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1279px){
 
   #menuNav
 {
@@ -209,19 +209,21 @@ ul {
 
 #menu
 {
-    opacity:1;
-    position: absolute;
-    width: 80vw;
-    height: auto;
-    margin: -100px 0 0 -90vw;
-    padding: 50px;
-    padding-top: 125px;
-    background-color: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    transform-origin: 0% 0%;
-    transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  opacity: 1;
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  margin: -100px 0 0 -95vw;
+  padding-left: 50px;
+  padding-right: 25px;
+  padding-top: 125px;
+  padding-bottom: 70px;
+  background-color: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 #menu li

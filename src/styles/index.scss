@@ -31,7 +31,7 @@ body {
   overflow: hidden
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1279px){
   
   .app__title {
     margin-top: 50px;
@@ -49,7 +49,7 @@ body {
 }
 }
 
-@media screen and (min-width: 1279px){
+@media screen and (min-width: 1280px){
    .logoNasa img {
       position: fixed;
       width: 80px;
@@ -68,7 +68,7 @@ body {
   z-index: 3;
 }
 
-@media screen and (min-width: 1279px){
+@media screen and (min-width: 1280px){
 
   .searchbar__input {
     position: absolute;
@@ -87,7 +87,7 @@ body {
   }
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1279px){
   
   .searchbar {
     position: fixed;
@@ -127,12 +127,19 @@ body {
 .item {
   overflow: hidden;
   text-align: left;
+  margin: 4% 0 4% 0;
 }
+
+@media screen and (max-width: 1279px){
+.item {
+  text-align: center;
+}
+}
+
 // h2 Title
 
 .item__title {
-  margin:0 5% 0 0;
-  font-size: 2vw;
+  font-size: 1.5em;
   max-width: 66.6vw;
   overflow: hidden;
   display: inline-block;
@@ -140,17 +147,39 @@ body {
   color: #a2b1e2;
 }
 
+@media screen and (max-width: 1279px){
+  .item__title {
+    max-width: none;
+  }
+  }
+
 
 p {
 max-width: 75%;
-font-size: 1vw;
+font-size: 1em;
+color:#bdc1c6;
+margin: 0;
 }
 
+@media screen and (max-width: 1279px){
+  p {
+    max-width: none;
+    text-align: left;
+  }
+  }
+
 .item__keywords {
+  margin: 7px 0 7px 0;
   max-width: 66.6vw;
   white-space: nowrap;
   overflow: hidden;
 }
+
+@media screen and (max-width: 1279px){
+  .item__keywords {
+    max-width:none;
+  }
+  }
 
 // linkWords
 
@@ -170,23 +199,21 @@ font-size: 1vw;
 
 
 .item__preview {
-
   max-width: 300px;
   max-height: 300px;
+  margin-bottom: 2%;
   background-size: cover;
   position: absolute;
   right: 5vw;
   z-index: -1;
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1279px){
 
   .item__preview {
-    text-align: center;
-    max-width: 80px;
-    max-height: 80px;
+    margin: 25px 0 25px 0px;
     background-size: cover;
-    position: absolute;
-    right: 5vw;
+    position: relative;
+    right: 0;
   }
 }
