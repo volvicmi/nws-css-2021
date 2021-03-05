@@ -3,6 +3,7 @@
 
 // SearchBar button 
 
+
 .searchbar__btn {
   font-size: 0;
   width: 20px;
@@ -28,7 +29,6 @@
     transform: rotate(-35deg);
     top: 13px;
     left: 13px;
-    
   }
 
 @media screen and (max-width: 680px){
@@ -37,6 +37,7 @@
     .searchbar__btn {
       width: 15px;
       height: 15px;
+      left: 68vw;
       margin-left:10px;
       display: inline-block;
       border: 2px solid var(--hoverColor);
@@ -44,7 +45,6 @@
     }
     
     .searchbar__btn:after {
-      border-radius:40%;
       width: 2px;
       height: 9px;
       top: 9px;
@@ -53,14 +53,12 @@
   
   }
   
-  @media screen and (min-width: 681px) and (max-width: 1279px){
-  }
-
-
+ 
 
   // Menu 
 
-  
+  @media screen and (min-width: 1279px){
+
   #menuNav
 {
   position: fixed;
@@ -117,6 +115,8 @@ ul {
   font-size: 20px;
 }
 
+}
+
 
   // Menu Mobile 
 
@@ -130,7 +130,7 @@ ul {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 
 #menuNav a
@@ -209,7 +209,7 @@ ul {
 
 #menu
 {
-    opacity: 95%;
+    opacity:1;
     position: absolute;
     width: 80vw;
     height: auto;

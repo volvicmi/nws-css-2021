@@ -34,20 +34,18 @@ body {
 @media screen and (max-width: 680px){
   
   .app__title {
-    margin-top:4px;
+    margin-top: 50px;
     position: fixed;
-    font-size: 0.9em;
+    font-size: 0.5em;
     z-index: 2;
-    left: 110px;
+    left: 2.5vw;
     text-transform: uppercase;
-    max-width: 100px;
-    overflow: hidden
   }
   .logoNasa img {
     position: fixed;
-    width: 80px;
-    margin-left: 30px;
-    margin-top: 3px;
+    width: 50px;
+    margin-left: -79vw;
+    margin-top: -15px;
 }
 }
 
@@ -92,15 +90,20 @@ body {
 @media screen and (max-width: 680px){
   
   .searchbar {
+    position: fixed;
+    width: 100vw;
+    height: 61px;
+    background-color: #303134;
     text-align: center;
-    position: relative;
+    z-index: 1;
   }
 
   .searchbar__input {
-    position: absolute;
-    width: 200px;
-    left: 50px;
-    height: 16px;
+    position: fixed;
+    width: 50vw;
+    height: 25px;
+    left: 25vw;
+    top: 16px;
     margin: 0;
     border-radius: 16px;
     border: 1px solid #5f6368;
@@ -125,7 +128,7 @@ body {
   overflow: hidden;
   text-align: left;
 }
-// h2
+// h2 Title
 
 .item__title {
   margin:0 5% 0 0;
