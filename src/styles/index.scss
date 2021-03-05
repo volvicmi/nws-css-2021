@@ -1,6 +1,7 @@
 @import './focus_modal.scss';
-@import 'objects.scss';
 @import 'mixins.scss';
+@import 'menu.scss';
+@import 'searchBar.scss';
 
 
 html {
@@ -13,9 +14,6 @@ body {
   color: #f1f1f1;
 }
 
-.item-link {
-  cursor:pointer;
-}
 
 
 // Title and Logo
@@ -34,11 +32,13 @@ body {
 @media screen and (max-width: 1279px){
   
   .app__title {
+    transform: translateX(-50%);
     margin-top: 50px;
     position: fixed;
     font-size: 0.5em;
     z-index: 2;
-    left: 2.5vw;
+    left: 13%;
+    text-align: center;
     text-transform: uppercase;
   }
   .logoNasa img {
@@ -58,65 +58,24 @@ body {
   }
 }
 
+// h2
 
-// SearchBar
-
-.searchbar {
-  
-  text-align: center;
-  position: fixed;
-  z-index: 3;
-}
-
-@media screen and (min-width: 1280px){
-
-  .searchbar__input {
-    position: absolute;
-    width: 690px;
-    left: 200px;
-    height: 36px;
-    margin-top:16px;
-    border-radius: 16px;
-    border: 1px solid #5f6368;
-    box-shadow: none;
-    background-color: #303134;
-    color: white;
-    text-align: left;
-    text-indent:1.3em;
-    font-size: 1em;
-  }
+.item__title {
+  font-size: 1.5em;
+  max-width: 66.6vw;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  color: #a2b1e2;
 }
 
 @media screen and (max-width: 1279px){
-  
-  .searchbar {
-    position: fixed;
-    width: 100vw;
-    height: 61px;
-    background-color: #303134;
-    text-align: center;
-    z-index: 1;
+  .item__title {
+    max-width: none;
+  }
   }
 
-  .searchbar__input {
-    position: fixed;
-    width: 50vw;
-    height: 25px;
-    left: 25vw;
-    top: 16px;
-    margin: 0;
-    border-radius: 16px;
-    border: 1px solid #5f6368;
-    box-shadow: none;
-    background-color: #303134;
-    color: white;
-    text-align: left;
-    text-indent:0.7em;
-    font-size: 0.8em;
-  }
-
-}
-
+// Paragraph
 
 .items {
   margin-top: 72px;
@@ -136,23 +95,9 @@ body {
 }
 }
 
-// h2 Title
-
-.item__title {
-  font-size: 1.5em;
-  max-width: 66.6vw;
-  overflow: hidden;
-  display: inline-block;
-  white-space: nowrap;
-  color: #a2b1e2;
+.item-link {
+  cursor:pointer;
 }
-
-@media screen and (max-width: 1279px){
-  .item__title {
-    max-width: none;
-  }
-  }
-
 
 p {
 max-width: 75%;
@@ -197,11 +142,11 @@ margin: 0;
 
 // ImageContainer
 
-
 .item__preview {
   max-width: 300px;
   max-height: 300px;
   margin-bottom: 2%;
+  margin-top: -10vw;
   background-size: cover;
   position: absolute;
   right: 5vw;
